@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-import os
 
 app = FastAPI()
 
@@ -32,7 +31,7 @@ async def perform_action(action_request: ActionRequest):
         response["text"] = "You changed the text!"
     elif action == "play sound":
         print("play sound")
-        response["sound"] = f"/moo.mp3"
+        response["sound"] = "/moo.mp3"
     else:
         response["error"] = "Unknown action"
 
