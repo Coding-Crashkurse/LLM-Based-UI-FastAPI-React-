@@ -32,7 +32,7 @@ structured_llm = model.with_structured_output(ActionResponse)
 
 action_system = """You are an action identifier. Identify the action from the user input and provide the appropriate response.
 For 'change color', set 'background_color' to input of the user.
-For 'trigger animation', set 'animation' to the input of the user.
+For 'trigger animation', set 'animation' to the input of the user, availble animation are 'spin' and 'bounce'.
 For 'change text', set 'text' to the input of the user.
 For 'play sound', set 'sound' to user input. Cat = cat.mp3, Cow = cow.mp3, Dog = dog.mp3.
 If the action is unknown, set 'error' to 'Unknown action'.
